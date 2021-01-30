@@ -1,0 +1,21 @@
+---
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: {{ .Chart.Name }}-cronjob
+spec:
+  successfulJobsHistoryLimit: {{ .Values.jobHistoryLimit }}
+  failedJobsHistoryLimit: {{ .Values.jobHistoryLimit }}
+  schedule: {{ .Values.cronSchedule }}
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+          - name: {{ .Values.image.name }}-container
+            image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+            imagePullPolicy: Always
+            envFrom:
+            - secretRef:
+                name: {{ .Chart.Name }}-secret
