@@ -11,7 +11,7 @@ helm install zufardhiyaulhaq/kubernetesweekly --name-template kubernetesweekly -
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
-| community | string | `"Kubernetes Indonesia Community"` |  |
+| community | string | `"Cloud Native Indonesia Community"` |  |
 | cronSchedule | string | `"0 8 * * 6"` |  |
 | github.branch | string | `"master"` |  |
 | github.organization | string | `"zufardhiyaulhaq"` |  |

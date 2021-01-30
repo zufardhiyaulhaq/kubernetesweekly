@@ -24,7 +24,7 @@ github:
   branch: "master"
 
 # community name for CRDs
-community: "Kubernetes Indonesia Community"
+community: "Cloud Native Indonesia Community"
 
 # tag for CRDs
 tags: "weekly,kubernetes"
