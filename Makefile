@@ -4,8 +4,8 @@ BIN_DIR := ./bin
 OUT_DIR := ./output
 $(shell mkdir -p $(BIN_DIR) $(OUT_DIR))
 
-IMAGE_REGISTRY=cloudnativeid
-IMAGE_NAME=$(IMAGE_REGISTRY)/community-system
+IMAGE_REGISTRY=zufardhiyaulhaq
+IMAGE_NAME=$(IMAGE_REGISTRY)/kubernetesweekly
 IMAGE_TAG=$(shell git rev-parse --short HEAD)
 
 CURRENT_DIR=$(shell pwd)
