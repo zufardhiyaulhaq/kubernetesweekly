@@ -1,4 +1,4 @@
-name: Upload releases to charts
+name: Chart
 
 on:
   push:
@@ -12,7 +12,7 @@ env:
   CHART_PASSWORD: ${{ secrets.CHART_PASSWORD }}
 
 jobs:
-  setup-deploy:
+  deploy:
     name: Setup and Deploy
     runs-on: ubuntu-latest
     steps:
