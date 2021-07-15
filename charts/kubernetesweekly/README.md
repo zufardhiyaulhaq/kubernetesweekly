@@ -1,13 +1,12 @@
-# kubernetesweekly charts
-Helm chart for kubernetesweeklys
+# kubernetesweekly
 
-### Installing the charts
-```
-helm repo add zufardhiyaulhaq https://charts.zufardhiyaulhaq.com/
-helm install zufardhiyaulhaq/kubernetesweekly --name-template kubernetesweekly -f values.yaml
-```
+![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.0.0](https://img.shields.io/badge/AppVersion-1.0.0-informational?style=flat-square)
 
-### Configuration
+kubernetesweekly scrapper
+
+**Homepage:** <https://github.com/zufardhiyaulhaq/kubernetesweekly>
+
+## Values
 
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
@@ -20,10 +19,8 @@ helm install zufardhiyaulhaq/kubernetesweekly --name-template kubernetesweekly -
 | github.token | string | `"your_token"` |  |
 | image.name | string | `"kubernetesweekly"` |  |
 | image.repository | string | `"zufardhiyaulhaq/kubernetesweekly"` |  |
-| image.tag | string | `"0.0.1"` |  |
+| image.tag | string | `"v1.0.0"` |  |
 | image_url | string | `"https://raw.githubusercontent.com/cncf/artwork/master/other/cncf/horizontal/color/cncf-color.png"` |  |
 | jobHistoryLimit | int | `1` |  |
 | namespace | string | `"kubernetes-community"` |  |
 | tags | string | `"weekly,kubernetes"` |  |
-
-check & modify values.yaml for details

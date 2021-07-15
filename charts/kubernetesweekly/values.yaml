@@ -9,7 +9,7 @@ cronSchedule: "0 8 * * 6"
 image:
   name: "kubernetesweekly"
   repository: "zufardhiyaulhaq/kubernetesweekly"
-  tag: "0.0.1"
+  tag: "v1.0.0"
 
 #############################
 # envoronment configuration #

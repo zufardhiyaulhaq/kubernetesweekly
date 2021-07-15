@@ -34,7 +34,7 @@ export IMAGE="https://raw.githubusercontent.com/cncf/artwork/master/other/cncf/h
 ```
 - Build & Run
 ```
-go build -o kubernetesweekly cmd/kubernetesweekly/*.go
+go build -o kubernetesweekly cmd/kubernetesweekly/main.go
 ./kubernetesweekly
 ```
 

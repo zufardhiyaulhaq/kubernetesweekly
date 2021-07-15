@@ -1,4 +1,9 @@
 # kubernetesweekly
+[![made with Go](https://img.shields.io/badge/made%20with-Go-brightgreen)](http://golang.org)
+[![Github main branch build](https://img.shields.io/github/workflow/status/zufardhiyaulhaq/kubernetesweekly/main)](https://github.com/zufardhiyaulhaq/kubernetesweekly/actions/workflows/main.yml)
+[![GitHub issues](https://img.shields.io/github/issues/zufardhiyaulhaq/kubernetesweekly)](https://github.com/zufardhiyaulhaq/kubernetesweekly/issues)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/zufardhiyaulhaq/kubernetesweekly)](https://github.com/zufardhiyaulhaq/kubernetesweekly/pulls)
+
 Get data from kubeweekly and create Weekly CRDs based on community-operator & push to datastore
 
 ### Installing the charts
@@ -20,7 +25,7 @@ helm install zufardhiyaulhaq/kubernetesweekly --name-template kubernetesweekly -
 | github.token | string | `"your_token"` |  |
 | image.name | string | `"kubernetesweekly"` |  |
 | image.repository | string | `"zufardhiyaulhaq/kubernetesweekly"` |  |
-| image.tag | string | `"0.0.1"` |  |
+| image.tag | string | `"v1.0.0"` |  |
 | image_url | string | `"https://raw.githubusercontent.com/cncf/artwork/master/other/cncf/horizontal/color/cncf-color.png"` |  |
 | jobHistoryLimit | int | `1` |  |
 | namespace | string | `"kubernetes-community"` |  |

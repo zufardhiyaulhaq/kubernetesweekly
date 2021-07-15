@@ -1,17 +1,36 @@
-# Dockerfile References: https://docs.docker.com/engine/reference/builder/
+#################
+# Base image
+#################
+FROM alpine:3.12 as kubernetesweekly-base
 
-# Start from the latest alpine
-FROM alpine
+USER root
 
-# Add Maintainer Info
-LABEL maintainer="Zufar Dhiyaulhaq <zufardhiyaulhaq@gmail.com>"
+RUN addgroup -g 10001 kubernetesweekly && \
+    adduser --disabled-password --system --gecos "" --home "/home/kubernetesweekly" --shell "/sbin/nologin" --uid 10001 kubernetesweekly && \
+    mkdir -p "/home/kubernetesweekly" && \
+    chown kubernetesweekly:0 /home/kubernetesweekly && \
+    chmod g=u /home/kubernetesweekly && \
+    chmod g=u /etc/passwd
 
-# Set the Current Working Directory inside the container
-WORKDIR /kubernetesweekly
+ENV USER=kubernetesweekly
+USER 10001
+WORKDIR /home/kubernetesweekly
 
-# Copy the source from the current directory to the Working Directory inside the container
-COPY kubernetesweekly .
-RUN chmod +x kubernetesweekly
+#################
+# Builder image
+#################
+FROM golang:1.15-alpine AS kubernetesweekly-builder
+RUN apk add --update --no-cache alpine-sdk
+WORKDIR /app
+COPY . .
+RUN make build
+
+#################
+# Final image
+#################
+FROM kubernetesweekly-base
+
+COPY --from=kubernetesweekly-builder /app/bin/kubernetesweekly /usr/local/bin
 
 # Command to run the executable
-ENTRYPOINT ["./kubernetesweekly"]
+ENTRYPOINT ["./app/bin/kubernetesweekly"]
