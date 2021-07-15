@@ -23,4 +23,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: cloudnativeid/kubernetesweekly:latest,cloudnativeid/kubernetesweekly:${{ steps.vars.outputs.tag }}
+          tags: zufardhiyaulhaq/kubernetesweekly:latest,zufardhiyaulhaq/kubernetesweekly:${{ steps.vars.outputs.tag }}
