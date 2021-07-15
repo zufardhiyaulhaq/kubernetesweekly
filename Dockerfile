@@ -33,4 +33,4 @@ FROM kubernetesweekly-base
 COPY --from=kubernetesweekly-builder /app/bin/kubernetesweekly /usr/local/bin
 
 # Command to run the executable
-ENTRYPOINT ["./app/bin/kubernetesweekly"]
+ENTRYPOINT ["kubernetesweekly"]
