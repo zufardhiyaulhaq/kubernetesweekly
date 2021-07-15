@@ -32,14 +32,10 @@ export TAGS="weekly,kubernetes"
 export NAMESPACE="kubernetes-community"
 export IMAGE="https://raw.githubusercontent.com/cncf/artwork/master/other/cncf/horizontal/color/cncf-color.png"
 ```
-- Build & Run
+- Lint, test, build, and run
 ```
-go build -o kubernetesweekly cmd/kubernetesweekly/main.go
-./kubernetesweekly
-```
-
-### Build Docker Image
-- To build your image
-```
-make build REPOSITORY=username/repository TAG=tag
+make lint
+make test
+make build
+make run
 ```
