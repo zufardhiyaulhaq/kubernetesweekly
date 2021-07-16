@@ -1,6 +1,6 @@
 # kubernetesweekly
 [![made with Go](https://img.shields.io/badge/made%20with-Go-brightgreen)](http://golang.org)
-[![Github main branch build](https://img.shields.io/github/workflow/status/zufardhiyaulhaq/kubernetesweekly/main)](https://github.com/zufardhiyaulhaq/kubernetesweekly/actions/workflows/main.yml)
+[![Github main branch build](https://img.shields.io/github/workflow/status/zufardhiyaulhaq/kubernetesweekly/Main)](https://github.com/zufardhiyaulhaq/kubernetesweekly/actions/workflows/main.yml)
 [![GitHub issues](https://img.shields.io/github/issues/zufardhiyaulhaq/kubernetesweekly)](https://github.com/zufardhiyaulhaq/kubernetesweekly/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/zufardhiyaulhaq/kubernetesweekly)](https://github.com/zufardhiyaulhaq/kubernetesweekly/pulls)
 
