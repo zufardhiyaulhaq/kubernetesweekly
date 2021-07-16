@@ -1,0 +1,21 @@
+{{ template "chart.header" . }}
+{{ template "chart.description" . }}
+
+{{ template "chart.versionBadge" . }}{{ template "chart.typeBadge" . }}{{ template "chart.appVersionBadge" . }}[![made with Go](https://img.shields.io/badge/made%20with-Go-brightgreen)](http://golang.org) [![Github main branch build](https://img.shields.io/github/workflow/status/zufardhiyaulhaq/kubernetesweekly/Main)](https://github.com/zufardhiyaulhaq/kubernetesweekly/actions/workflows/main.yml) [![GitHub issues](https://img.shields.io/github/issues/zufardhiyaulhaq/kubernetesweekly)](https://github.com/zufardhiyaulhaq/kubernetesweekly/issues) [![GitHub pull requests](https://img.shields.io/github/issues-pr/zufardhiyaulhaq/kubernetesweekly)](https://github.com/zufardhiyaulhaq/kubernetesweekly/pulls)
+
+## Installing the Chart
+
+To install the chart with the release name `my-release` and secret `foo`:
+
+```console
+kubectl apply -f secret.yaml
+
+$ helm repo add zufardhiyaulhaq https://charts.zufardhiyaulhaq.com/
+$ helm install kubernetesweekly zufardhiyaulhaq/kubernetesweekly --values values.yaml --set 
+```
+
+{{ template "chart.requirementsSection" . }}
+
+{{ template "chart.valuesSection" . }}
+
+{{ template "helm-docs.versionFooter" . }}

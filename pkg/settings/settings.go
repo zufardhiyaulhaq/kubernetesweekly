@@ -10,10 +10,10 @@ type Settings struct {
 	GithubRepository     string   `envconfig:"GITHUB_REPOSITORY"`
 	GithubRepositoryPath string   `envconfig:"GITHUB_REPOSITORY_PATH"`
 	GithubBranch         string   `envconfig:"GITHUB_BRANCH"`
-	MeetupNamespace      string   `envconfig:"NAMESPACE"`
-	MeetupCommunity      string   `envconfig:"COMMUNITY"`
-	MeetupTags           []string `envconfig:"TAGS"`
-	MeetupImage          string   `envconfig:"IMAGE"`
+	WeeklyNamespace      string   `envconfig:"WEEKLY_NAMESPACE"`
+	WeeklyCommunity      string   `envconfig:"WEEKLY_COMMUNITY"`
+	WeeklyTags           []string `envconfig:"WEEKLY_TAGS"`
+	WeeklyImage          string   `envconfig:"WEEKLY_IMAGE"`
 }
 
 func NewSettings() (Settings, error) {

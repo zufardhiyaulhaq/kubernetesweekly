@@ -9,6 +9,7 @@ require (
 	github.com/google/go-github v17.0.0+incompatible
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/mitchellh/mapstructure v1.3.2
+	github.com/norwoodj/helm-docs v1.6.0 // indirect
 	github.com/rs/zerolog v1.23.0
 	github.com/sirupsen/logrus v1.8.1
 	github.com/zufardhiyaulhaq/goweekly v0.0.0-20200628122815-24172e5ed9bf

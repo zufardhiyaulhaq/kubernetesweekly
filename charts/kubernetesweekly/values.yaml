@@ -1,37 +1,14 @@
 
-# define how many completed & failed pod jobs
-jobHistoryLimit: 1
-
-# define time to exec the cronjob
 cronSchedule: "0 8 * * 6"
 
-# image cronjob configuration
 image:
-  name: "kubernetesweekly"
   repository: "zufardhiyaulhaq/kubernetesweekly"
-  tag: "v1.0.0"
+  tag: "v1.0.1"
 
-#############################
-# envoronment configuration #
-#############################
+secret: ""
 
-# github configuration to store the CRDs
-github:
-  token: "your_token"
-  organization: "zufardhiyaulhaq"
-  repository: "community-ops"
-  repository_path: "./manifest/kubernetes-community/"
-  branch: "master"
-
-# community name for CRDs
-community: "Cloud Native Indonesia Community"
-
-# tag for CRDs
-tags: "weekly,kubernetes"
-
-# namespace for CRDs
-namespace: "kubernetes-community"
-
-# image for CRDs
-image_url: "https://raw.githubusercontent.com/cncf/artwork/master/other/cncf/horizontal/color/cncf-color.png"
-
+weekly:
+  community: "Cloud Native Indonesia Community"
+  tags: "weekly,kubernetes"
+  namespace: "kubernetes-community"
+  image_url: "https://raw.githubusercontent.com/cncf/artwork/master/other/cncf/horizontal/color/cncf-color.png"

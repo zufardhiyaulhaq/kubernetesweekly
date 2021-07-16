@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}
+  labels:
+    app.kubernetes.io/name: {{ .Release.Name }}
+    helm.sh/chart: {{ template "kubernetesweekly.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+data:
+  WEEKLY_COMMUNITY: {{ .Values.weekly.community }}
+  WEEKLY_TAGS: {{ .Values.weekly.tags }}
+  WEEKLY_NAMESPACE: {{ .Values.weekly.namespace }}
+  WEEKLY_IMAGE: {{ .Values.weekly.image_url }}

@@ -54,6 +54,11 @@ build:
 run:
 	go run cmd/kubernetesweekly/main.go
 
+.PHONY: readme
+readme:
+	GO111MODULE=on go get github.com/norwoodj/helm-docs/cmd/helm-docs
+	helm-docs -c ./charts/kubernetesweekly -d > README.md
+
 .PHONY: helm.create.releases
 helm.create.releases:
 	helm package charts/kubernetesweekly --destination charts/releases

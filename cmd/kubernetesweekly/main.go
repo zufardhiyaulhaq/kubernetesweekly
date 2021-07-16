@@ -78,9 +78,9 @@ func main() {
 	weeklySpec, err := models.NewWeeklySpecBuilder().
 		SetName(name).
 		SetDate(utils.GetDate()).
-		SetCommunity(settings.MeetupCommunity).
-		SetImage(settings.MeetupImage).
-		SetTags(settings.MeetupTags).
+		SetCommunity(settings.WeeklyCommunity).
+		SetImage(settings.WeeklyImage).
+		SetTags(settings.WeeklyTags).
 		SetArticles(artiles).
 		Build()
 	if err != nil {
@@ -90,7 +90,7 @@ func main() {
 	// build weekly object
 	weekly, err := models.NewWeeklyBuilder().
 		SetName(name).
-		SetNamespace(settings.MeetupNamespace).
+		SetNamespace(settings.WeeklyNamespace).
 		SetSpec(weeklySpec).
 		Build()
 	if err != nil {

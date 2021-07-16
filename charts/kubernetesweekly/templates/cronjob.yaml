@@ -2,10 +2,15 @@
 apiVersion: batch/v1beta1
 kind: CronJob
 metadata:
-  name: {{ .Chart.Name }}-cronjob
+  name: {{ .Release.Name }}
+  labels:
+    app.kubernetes.io/name: {{ .Release.Name }}
+    helm.sh/chart: {{ template "kubernetesweekly.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
-  successfulJobsHistoryLimit: {{ .Values.jobHistoryLimit }}
-  failedJobsHistoryLimit: {{ .Values.jobHistoryLimit }}
+  successfulJobsHistoryLimit: 1
+  failedJobsHistoryLimit: 1
   schedule: {{ .Values.cronSchedule }}
   jobTemplate:
     spec:
@@ -13,9 +18,11 @@ spec:
         spec:
           restartPolicy: OnFailure
           containers:
-          - name: {{ .Values.image.name }}-container
+          - name: {{ .Release.Name }}
             image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
             imagePullPolicy: Always
             envFrom:
+            - configMapRef:
+                name: {{ .Release.Name }}
             - secretRef:
-                name: {{ .Chart.Name }}-secret
+                name: {{ .Values.secret }}
