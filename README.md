@@ -11,8 +11,8 @@ To install the chart with the release name `my-release` and secret `foo`:
 ```console
 kubectl apply -f secret.yaml
 
-$ helm repo add zufardhiyaulhaq https://charts.zufardhiyaulhaq.com/
-$ helm install kubernetesweekly zufardhiyaulhaq/kubernetesweekly --values values.yaml --set secret=foo
+helm repo add zufardhiyaulhaq https://charts.zufardhiyaulhaq.com/
+helm install kubernetesweekly zufardhiyaulhaq/kubernetesweekly --values values.yaml --set secret=foo
 ```
 
 ## Values

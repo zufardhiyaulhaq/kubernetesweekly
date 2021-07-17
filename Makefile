@@ -58,6 +58,7 @@ run:
 readme:
 	GO111MODULE=on go get github.com/norwoodj/helm-docs/cmd/helm-docs
 	helm-docs -c ./charts/kubernetesweekly -d > README.md
+	helm-docs -c ./charts/kubernetesweekly
 
 .PHONY: helm.create.releases
 helm.create.releases:

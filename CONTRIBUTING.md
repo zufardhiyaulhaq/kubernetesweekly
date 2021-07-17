@@ -24,7 +24,7 @@ for example
 export GITHUB_TOKEN="token"
 export GITHUB_ORGANIZATION="zufardhiyaulhaq"
 export GITHUB_REPOSITORY="community-ops"
-export GITHUB_REPOSITORY_PATH="./manifest/kubernetes-community/"
+export GITHUB_REPOSITORY_PATH="./manifest/kubernetes-community/weekly/"
 export GITHUB_BRANCH="master"
 
 export WEEKLY_COMMUNITY="Kubernetes Indonesia Community"
