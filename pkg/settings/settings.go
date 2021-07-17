@@ -5,15 +5,15 @@ import (
 )
 
 type Settings struct {
-	GithubOrganization   string   `envconfig:"GITHUB_ORGANIZATION"`
-	GithubToken          string   `envconfig:"GITHUB_TOKEN"`
-	GithubRepository     string   `envconfig:"GITHUB_REPOSITORY"`
-	GithubRepositoryPath string   `envconfig:"GITHUB_REPOSITORY_PATH"`
-	GithubBranch         string   `envconfig:"GITHUB_BRANCH"`
-	WeeklyNamespace      string   `envconfig:"WEEKLY_NAMESPACE"`
-	WeeklyCommunity      string   `envconfig:"WEEKLY_COMMUNITY"`
-	WeeklyTags           []string `envconfig:"WEEKLY_TAGS"`
-	WeeklyImage          string   `envconfig:"WEEKLY_IMAGE"`
+	GithubOrganization   string   `required:"true" envconfig:"GITHUB_ORGANIZATION"`
+	GithubToken          string   `required:"true" envconfig:"GITHUB_TOKEN"`
+	GithubRepository     string   `required:"true" envconfig:"GITHUB_REPOSITORY"`
+	GithubRepositoryPath string   `required:"true" envconfig:"GITHUB_REPOSITORY_PATH"`
+	GithubBranch         string   `required:"true" envconfig:"GITHUB_BRANCH"`
+	WeeklyNamespace      string   `required:"true" envconfig:"WEEKLY_NAMESPACE"`
+	WeeklyCommunity      string   `required:"true" envconfig:"WEEKLY_COMMUNITY"`
+	WeeklyTags           []string `required:"true" envconfig:"WEEKLY_TAGS"`
+	WeeklyImage          string   `required:"true" envconfig:"WEEKLY_IMAGE"`
 }
 
 func NewSettings() (Settings, error) {
