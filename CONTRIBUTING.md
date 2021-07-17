@@ -14,10 +14,10 @@ export GITHUB_REPOSITORY="GITHUB_REPOSITORY"
 export GITHUB_REPOSITORY_PATH="GITHUB_REPOSITORY_PATH"
 export GITHUB_BRANCH="BRANCH"
 
-export COMMUNITY="COMMUNITY_NAME"
-export TAGS="TAGS"
-export NAMESPACE="CRD_NAMESPACE"
-export IMAGE="IMAGE_FOR_WEEKLY"
+export WEEKLY_COMMUNITY="COMMUNITY_NAME"
+export WEEKLY_TAGS="TAGS"
+export WEEKLY_NAMESPACE="CRD_NAMESPACE"
+export WEEKLY_IMAGE="IMAGE_FOR_WEEKLY"
 ```
 for example
 ```
@@ -27,10 +27,10 @@ export GITHUB_REPOSITORY="community-ops"
 export GITHUB_REPOSITORY_PATH="./manifest/kubernetes-community/"
 export GITHUB_BRANCH="master"
 
-export COMMUNITY="Kubernetes Indonesia Community"
-export TAGS="weekly,kubernetes"
-export NAMESPACE="kubernetes-community"
-export IMAGE="https://raw.githubusercontent.com/cncf/artwork/master/other/cncf/horizontal/color/cncf-color.png"
+export WEEKLY_COMMUNITY="Kubernetes Indonesia Community"
+export WEEKLY_TAGS="weekly,kubernetes"
+export WEEKLY_NAMESPACE="kubernetes-community"
+export WEEKLY_IMAGE="https://raw.githubusercontent.com/cncf/artwork/master/other/cncf/horizontal/color/cncf-color.png"
 ```
 - Lint, test, build, and run
 ```
