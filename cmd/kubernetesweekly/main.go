@@ -63,7 +63,7 @@ func main() {
 	// if newest weekly filename is exist
 	for _, file := range files {
 		if filename == file {
-			contextLogger.Infof("%s already exist\n", name)
+			contextLogger.Infof("%s already exist", name)
 			return
 		}
 	}
@@ -103,7 +103,7 @@ func main() {
 	}
 
 	// create new file
-	contextLogger.Infof("create file %s in the repository\n", filename)
+	contextLogger.Infof("create file %s in the repository", filename)
 	err = githubRepository.CreateFile(filename, CommitMessage, weeklyByte, repository.RepositoryOptions{
 		Organization: settings.GithubOrganization,
 		Repository:   settings.GithubRepository,
