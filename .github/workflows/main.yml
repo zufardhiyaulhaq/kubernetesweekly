@@ -52,6 +52,11 @@ jobs:
           languages: go
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@v1
+      - name: Perform SonarQube Scan
+        uses: kitabisa/sonarqube-action@v1.1.0
+        with:
+          host: ${{ secrets.SONARQUBE_HOST }}
+          login: ${{ secrets.SONARQUBE_TOKEN }}
   image:
     runs-on: ubuntu-latest
     steps:
