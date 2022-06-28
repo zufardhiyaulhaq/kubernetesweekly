@@ -63,3 +63,4 @@ readme:
 .PHONY: helm.create.releases
 helm.create.releases:
 	helm package charts/kubernetesweekly --destination charts/releases
+	helm repo index charts/releases

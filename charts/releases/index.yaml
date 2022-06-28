@@ -1,0 +1,63 @@
+apiVersion: v1
+entries:
+  kubernetesweekly:
+  - apiVersion: v2
+    appVersion: 2.1.0
+    created: "2022-06-29T00:11:21.020169+07:00"
+    description: Get data from kubeweekly and create Weekly CRDs based on community-operator
+      and push to git datastore
+    digest: 96b2a344c4f331b51f12f9cb27004e596109bc322bd10f54431d5b50814a19d7
+    home: https://github.com/zufardhiyaulhaq/kubernetesweekly
+    maintainers:
+    - email: zufardhiyaulhaq@gmail.com
+      name: Zufar Dhiyaulhaq
+      url: https://zufardhiyaulhaq.com
+    name: kubernetesweekly
+    type: application
+    urls:
+    - kubernetesweekly-2.1.0.tgz
+    version: 2.1.0
+  - apiVersion: v2
+    appVersion: 1.0.1
+    created: "2022-06-29T00:11:21.019435+07:00"
+    description: Get data from kubeweekly and create Weekly CRDs based on community-operator
+      and push to git datastore
+    digest: def4f8c52c5c9d8908d977a4b4d16c7795a8cb458d6f298d2cbcc00c120f9d2c
+    home: https://github.com/zufardhiyaulhaq/kubernetesweekly
+    maintainers:
+    - email: zufardhiyaulhaq@gmail.com
+      name: Zufar Dhiyaulhaq
+      url: https://zufardhiyaulhaq.com
+    name: kubernetesweekly
+    type: application
+    urls:
+    - kubernetesweekly-2.0.0.tgz
+    version: 2.0.0
+  - apiVersion: v1
+    appVersion: 1.0.0
+    created: "2022-06-29T00:11:21.018158+07:00"
+    description: kubernetesweekly scrapper
+    digest: 4f9600b2bb47aaced0aa44fb140d65aa85c43f62229c3d0c4b20ebb978103d8a
+    home: https://github.com/zufardhiyaulhaq/kubernetesweekly
+    keywords:
+    - weekly
+    - kubernetesweekly
+    name: kubernetesweekly
+    type: application
+    urls:
+    - kubernetesweekly-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v1
+    appVersion: 0.0.1
+    created: "2022-06-29T00:11:21.017079+07:00"
+    description: kubernetesweekly scrapper
+    digest: af0871c94227aa82c2900e19c1b61928f8cb556694a872b1e7d69ed4ec38221f
+    home: https://github.com/zufardhiyaulhaq/kubernetesweekly
+    keywords:
+    - weekly
+    - kubernetesweekly
+    name: kubernetesweekly
+    urls:
+    - kubernetesweekly-0.0.1.tgz
+    version: 0.0.1
+generated: "2022-06-29T00:11:21.015785+07:00"
